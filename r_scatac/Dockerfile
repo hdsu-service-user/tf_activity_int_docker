@@ -10,7 +10,7 @@ RUN pip3.8 install macs2
 ######
 # install annot
 RUN R -e "BiocManager::install(c('BSgenome.Hsapiens.UCSC.hg19', 'EnsDb.Hsapiens.v75', 'GenomeInfoDbData', 'VariantAnnotation'), update = FALSE)"
-BiocManager::install(c('AnnotationFilter', 'biovizBase', 'ggbio', 'Rsamtools'), update = FALSE)
+RUN R -e "BiocManager::install(c('AnnotationFilter', 'biovizBase', 'ggbio', 'Rsamtools'), update = FALSE)"
 
 # Install Seurat
 RUN R -e "install.packages(c('Polychrome', 'Seurat'))"
