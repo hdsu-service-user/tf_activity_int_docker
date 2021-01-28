@@ -14,21 +14,21 @@ RUN R -e "BiocManager::install(c('AnnotationFilter', 'biovizBase', 'ggbio', 'Rsa
 
 # Install Seurat
 RUN R -e "install.packages(c('Polychrome', 'Seurat'))"
-# RUN R -e "devtools::install_github('timoast/signac', ref = 'develop')"
+RUN R -e "devtools::install_github('timoast/signac', ref = 'develop')"
 # 
 # #install.packages("writexl")
 # #devtools::install_version("RcppAnnoy", version = "0.0.16")
 # #devtools::install_version("uwot", version = "0.1.8")
 # 
+# Install SCENIC
+RUN R -e "BiocManager::install('RcisTarget', update = FALSE)"
+RUN R -e "devtools::install_github('aertslab/AUCell')"
+RUN R -e "devtools::install_github('aertslab/SCENIC')"
 # 
 # # Install ARchR
 # RUN R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = BiocManager::repositories())"
 # RUN R -e "devtools::install_github('GreenleafLab/chromVARmotifs')"
 # RUN R -e "devtools::install_github('immunogenomics/presto')"
 # 
-# # Install SCENIC
-# RUN R -e "BiocManager::install('RcisTarget', update = FALSE)"
-# RUN R -e "devtools::install_github('aertslab/AUCell')"
-# RUN R -e "devtools::install_github('aertslab/SCENIC')"
 # 
 # 
