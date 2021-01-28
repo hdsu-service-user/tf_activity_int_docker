@@ -39,7 +39,7 @@ RUN R -e "devtools::install_github('immunogenomics/presto', upgrade='never')"
 RUN apt-get update && apt-get install -y \
       libtiff-dev \
       libxt-dev
-#RUN R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = BiocManager::repositories(), upgrade='never')"
+RUN R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = BiocManager::repositories(), upgrade='never')"
 # 
 # 
 # 
