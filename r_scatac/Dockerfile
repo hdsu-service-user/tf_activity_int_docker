@@ -34,8 +34,8 @@ RUN R -e "devtools::install_github('aertslab/SCENIC', upgrade='never')"
 # 
 # Install ARchR
 RUN R -e "devtools::install_github('GreenleafLab/chromVARmotifs', upgrade='never')"
-#RUN R -e "devtools::install_github('immunogenomics/presto', upgrade='never')"
-#RUN R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = BiocManager::repositories(), upgrade='never')"
+RUN R -e "devtools::install_github('immunogenomics/presto', upgrade='never')"
+RUN R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = BiocManager::repositories(), upgrade='never')"
 # 
 # 
 # 
