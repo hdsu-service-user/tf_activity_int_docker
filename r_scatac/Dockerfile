@@ -16,6 +16,7 @@ RUN R -e "BiocManager::install(c('AnnotationFilter', 'biovizBase', 'ggbio', 'Rsa
 RUN R -e "install.packages(c('Polychrome', 'Seurat'))"
 
 # Install Signac
+RUN R -e "install.packages(c('testthat'))"
 RUN apt-get update && apt-get install -y \
     libglpk-dev
 RUN R -e "devtools::install_github('timoast/signac', ref = 'develop', upgrade='never')"
