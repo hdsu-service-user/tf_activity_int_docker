@@ -18,8 +18,9 @@ RUN R -e "install.packages(c('Polychrome', 'Seurat'))"
 # Install Signac
 RUN R -e "install.packages(c('testthat'))"
 RUN apt-get update && apt-get install -y \
-    libglpk-dev
-RUN R -e "install.packages(c('signac'))"    
+    libglpk-dev \
+    libgsl-dev
+RUN R -e "install.packages(c('Signac'))"    
 #RUN R -e "devtools::install_github('timoast/signac', ref = 'develop', upgrade='never')"
 # 
 # #install.packages("writexl")
@@ -32,9 +33,9 @@ RUN R -e "devtools::install_github('aertslab/AUCell', upgrade='never')"
 RUN R -e "devtools::install_github('aertslab/SCENIC', upgrade='never')"
 # 
 # Install ARchR
-RUN R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = BiocManager::repositories(), upgrade='never')"
 RUN R -e "devtools::install_github('GreenleafLab/chromVARmotifs', upgrade='never')"
-RUN R -e "devtools::install_github('immunogenomics/presto', upgrade='never')"
+#RUN R -e "devtools::install_github('immunogenomics/presto', upgrade='never')"
+#RUN R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = BiocManager::repositories(), upgrade='never')"
 # 
 # 
 # 
