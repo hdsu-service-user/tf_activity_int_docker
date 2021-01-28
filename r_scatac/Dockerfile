@@ -19,7 +19,8 @@ RUN R -e "install.packages(c('Polychrome', 'Seurat'))"
 RUN R -e "install.packages(c('testthat'))"
 RUN apt-get update && apt-get install -y \
     libglpk-dev
-RUN R -e "devtools::install_github('timoast/signac', ref = 'develop', upgrade='never')"
+RUN R -e "install.packages(c('signac'))"    
+#RUN R -e "devtools::install_github('timoast/signac', ref = 'develop', upgrade='never')"
 # 
 # #install.packages("writexl")
 # #devtools::install_version("RcppAnnoy", version = "0.0.16")
