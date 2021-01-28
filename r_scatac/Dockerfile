@@ -7,24 +7,11 @@ LABEL maintainer="Andres Quintero andres.quintero@bioquant.uni-heidelberg.de"
 RUN pip3.8 install macs2
 
 
-
-
-#RUN R -e "devtools::install_github( 'hdsu-bioquant/ButchR')"
-RUN R -e "devtools::install_github( 'wurst-theke/ButchR' )"
-    
-RUN R -e "BiocManager::install('DESeq2', update = FALSE)"
-RUN R -e "BiocManager::install('gage', update = FALSE)"
-RUN R -e "install.packages('DT')"
-
-
-
 ######
 
 # Install Seurat
 RUN R -e "install.packages(c('Polychrome', 'Seurat'))"
 RUN R -e "devtools::install_github('timoast/signac', ref = 'develop')"
-
-
 
 #install.packages("writexl")
 #devtools::install_version("RcppAnnoy", version = "0.0.16")
