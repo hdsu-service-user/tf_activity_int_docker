@@ -44,3 +44,4 @@ RUN R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = B
 # 
 # 
 RUN R -e "install.packages(c('umap'))"
+RUN R -e "install.packages(c('doRNG'))"
