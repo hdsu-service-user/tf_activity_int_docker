@@ -49,4 +49,5 @@ RUN R -e "install.packages(c('doMC'))"
 RUN R -e "BiocManager::install('limma', update = FALSE)"
 
 
-BiocManager::install("BSgenome.Mmusculus.UCSC.mm9", update = FALSE)
+RUN R -e "BiocManager::install('BSgenome.Mmusculus.UCSC.mm9', update = FALSE)"
+
