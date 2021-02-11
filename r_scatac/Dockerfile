@@ -46,3 +46,7 @@ RUN R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = B
 RUN R -e "install.packages(c('umap'))"
 RUN R -e "install.packages(c('doRNG'))"
 RUN R -e "install.packages(c('doMC'))"
+RUN R -e "BiocManager::install('limma', update = FALSE)"
+
+
+BiocManager::install("BSgenome.Mmusculus.UCSC.mm9", update = FALSE)
