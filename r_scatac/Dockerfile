@@ -53,4 +53,5 @@ RUN R -e "BiocManager::install('limma', update = FALSE)"
 
 
 RUN R -e "BiocManager::install('BSgenome.Mmusculus.UCSC.mm9', update = FALSE)"
+RUN R -e "BiocManager::install(c('EnsDb.Mmusculus.v75', 'EnsDb.Mmusculus.v79'), update = FALSE)"
 
